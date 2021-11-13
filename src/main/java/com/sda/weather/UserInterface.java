@@ -19,10 +19,10 @@ public class UserInterface {
 
             switch (option) {
                 case 1:
-                    addNewPlace();
+                    addNewLocation();
                     break;
                 case 2:
-                    showAllPlaces();
+                    showAllLocations();
                     break;
                 case 3:
                     showWeather();
@@ -33,15 +33,19 @@ public class UserInterface {
         }
     }
 
-    private void addNewPlace() {
+    private void addNewLocation() {
+
+
 
     }
 
-    private void showAllPlaces() {
+    private void showAllLocations() {
 
     }
 
     private void showWeather() {
 
     }
+
+
 }
