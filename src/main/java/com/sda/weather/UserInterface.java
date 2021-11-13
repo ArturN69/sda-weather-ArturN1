@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    // todo private final LocationController locationController
+    // private final LocationController locationController
     private final LocationController locationController;
 
-    // todo update a constructor and obtain a locationController
+    // update a constructor and obtain a locationController
     public UserInterface(LocationController locationController) {
         this.locationController = locationController;
     }
@@ -42,24 +42,26 @@ public class UserInterface {
     }
 
     private void addNewLocation() {
-        // todo use a Scanner class
-        // todo get location data
-        // todo create a JSON based on those data -> JSON has a String type
-        // todo use locationController and pass the JSON
+        // get location data
+        // create a JSON based on those data -> JSON has a String type
+        // use locationController and pass the JSON
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj nazwę miasta:");
         String city = scanner.nextLine();
+        System.out.println("Podaj region:");
+        String region = scanner.nextLine();
         System.out.println("Podaj nazwę kraju:");
         String country = scanner.nextLine();
         System.out.println("Podaj szerokość geograficzną:");
         String latitude = scanner.nextLine();
         System.out.println("Podaj długość geograficzną:");
         String longitude = scanner.nextLine();
-        // todo take into account a region value
-        String requestData = String.format("{\"city\": \"%s\",\"country\": \"%s\",\"latitude\": \"%s\", \"longitude\": \"%s\"}", city, country, latitude, longitude);
+
+        String requestData = String.format("{\"city\": \"%s\",\"region\": \"%s\",\"country\": \"%s\",\"latitude\": \"%s\", \"longitude\": \"%s\"}",
+                city, region, country, latitude, longitude);
 
         String response = locationController.addNewLocation(requestData);
-        System.out.println("Server response: " + response);
+        System.out.println("Server response: " + response + "\n");
 
     }
 
