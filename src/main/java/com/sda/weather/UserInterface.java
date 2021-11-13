@@ -22,7 +22,7 @@ public class UserInterface {
                     addNewPlace();
                     break;
                 case 2:
-                    showAllPlace();
+                    showAllPlaces();
                     break;
                 case 3:
                     showWeather();
@@ -37,7 +37,7 @@ public class UserInterface {
 
     }
 
-    private void showAllPlace() {
+    private void showAllPlaces() {
 
     }
 
