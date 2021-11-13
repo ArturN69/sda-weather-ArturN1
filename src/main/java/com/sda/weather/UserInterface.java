@@ -18,7 +18,6 @@ public class UserInterface {
             int option = scanner.nextInt();
 
             switch (option) {
-
                 case 1:
                     addNewPlace();
                     break;
@@ -26,14 +25,23 @@ public class UserInterface {
                     showAllPlace();
                     break;
                 case 3:
-                    ShowWheather();
+                    showWeather();
                     break;
                 case 0:
                     return;
             }
-
         }
+    }
 
+    private void addNewPlace() {
+
+    }
+
+    private void showAllPlace() {
+
+    }
+
+    private void showWeather() {
 
     }
 }
