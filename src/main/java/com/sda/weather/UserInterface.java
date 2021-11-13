@@ -55,6 +55,7 @@ public class UserInterface {
         String latitude = scanner.nextLine();
         System.out.println("Podaj długość geograficzną:");
         String longitude = scanner.nextLine();
+        // todo take into account a region value
         String requestData = String.format("{\"city\": \"%s\",\"country\": \"%s\",\"latitude\": \"%s\", \"longitude\": \"%s\"}", city, country, latitude, longitude);
 
         String response = locationController.addNewLocation(requestData);
