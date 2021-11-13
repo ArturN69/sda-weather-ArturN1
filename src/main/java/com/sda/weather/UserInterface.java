@@ -3,8 +3,11 @@ package com.sda.weather;
 import java.util.Scanner;
 
 public class UserInterface {
-    public void run() {
 
+    // todo private final LocationController locationController
+    // todo update a constructor and obtain a locationController
+
+    public void run() {
         System.out.println("Aplikacja pogodowa jest uruchomiona\n");
 
         Scanner scanner = new Scanner(System.in);
@@ -34,9 +37,10 @@ public class UserInterface {
     }
 
     private void addNewLocation() {
-
-
-
+        // todo use a Scanner class
+        // todo get location data
+        // todo create a JSON based on those data -> JSON has a String type
+        // todo use locationController and pass the JSON
     }
 
     private void showAllLocations() {
@@ -46,6 +50,4 @@ public class UserInterface {
     private void showWeather() {
 
     }
-
-
 }
