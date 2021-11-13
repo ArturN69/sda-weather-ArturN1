@@ -8,7 +8,31 @@ public class UserInterface {
         System.out.println("Aplikacja pogodowa jest uruchomiona\n");
 
         Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Witaj w aplikacji serwisu pogodowego. Wybierz jedną z opcji poniżej?");
+            System.out.println("1.Dodaj lokalizację");
+            System.out.println("2.Wyświetl dodane lokalizacje");
+            System.out.println("3.Wyświetl pogodę dla wybranej lokalizacji");
+            System.out.println("0.Zamknij aplikację");
 
+            int option = scanner.nextInt();
+
+            switch (option) {
+
+                case 1:
+                    addNewPlace();
+                    break;
+                case 2:
+                    showAllPlace();
+                    break;
+                case 3:
+                    ShowWheather();
+                    break;
+                case 0:
+                    return;
+            }
+
+        }
 
 
     }
