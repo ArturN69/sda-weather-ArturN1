@@ -3,7 +3,8 @@ package com.sda.weather;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.xml.stream.Location;
+// import javax.xml.stream.Location; // todo remove this import
+//                                       you have to create your own Location class and use it here
 
 public class LocationController {
 
@@ -36,7 +37,7 @@ public class LocationController {
 
             return objectMapper.writeValueAsString(newLocation);
             // todo return ....
-        } catch (JsonProcessingException e) {
+        } catch (JsonProcessingException e) { // todo catch IllegalArgumentException as well
             String errorMessage = e.getMessage();
             return "{\"message\": \"" + errorMessage + "\"}";
         }
