@@ -28,13 +28,12 @@ public class LocationController {
             // todo use LocationService and pass those data
             
             // todo create a new Location object inside a LocationService
-            //  Location newLocation = locationService.createLocation(city, region...)
+            //  Location newLocation = locationService.createLocation(city, region...) <---------------------------
 
             // todo serialize (Location) newLocation to JSON by using objectMapper.writeValueAsString(...)
 
 
             // todo return ....
-
         } catch (JsonProcessingException e) {
             String errorMessage = e.getMessage();
             return "{\"message\": \"" + errorMessage + "\"}";
