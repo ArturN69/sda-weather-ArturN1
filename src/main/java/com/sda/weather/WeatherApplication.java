@@ -6,10 +6,11 @@ public class WeatherApplication {
 
     public static void main(String[] args) {
         // create a new LocationController and pass it to the UserInterface by a constructor
-        // todo create a new LocationService
+        // create a new LocationService
 
         ObjectMapper objectMapper = new ObjectMapper();
-        LocationController locationController = new LocationController(objectMapper); // todo inject LocationService
+        LocationService locationService = new LocationService();
+        LocationController locationController = new LocationController(objectMapper, locationService); // inject LocationService
         UserInterface userInterface = new UserInterface(locationController);
         userInterface.run();
     }

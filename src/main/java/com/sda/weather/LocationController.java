@@ -6,11 +6,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class LocationController {
 
     private final ObjectMapper objectMapper;
-    // todo LocationService locationService, private, final
+    private final LocationService locationService;
 
-    public LocationController(ObjectMapper objectMapper) {
+    public LocationController(ObjectMapper objectMapper, LocationService locationService) {
         this.objectMapper = objectMapper;
-        // todo inject LocationService
+        this.locationService = locationService;
+        // inject LocationService
     }
 
     public String addNewLocation(String data) { // a data is a JSON format
@@ -25,13 +26,12 @@ public class LocationController {
             String longitude = locationDTO.getLongitude();
 
             // todo use LocationService and pass those data
+            
             // todo create a new Location object inside a LocationService
             //  Location newLocation = locationService.createLocation(city, region...)
 
             // todo serialize (Location) newLocation to JSON by using objectMapper.writeValueAsString(...)
 
-//            locationDTO entry
-//            LocationDTO locationDTO1 = new LocationDTO();
 
             // todo return ....
 
