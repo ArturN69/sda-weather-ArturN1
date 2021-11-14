@@ -6,9 +6,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class LocationController {
 
     private final ObjectMapper objectMapper;
+    // todo LocationService locationService, private, final
 
     public LocationController(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
+        // todo inject LocationService
     }
 
     public String addNewLocation(String data) { // a data is a JSON format
@@ -22,15 +24,22 @@ public class LocationController {
             String latitude = locationDTO.getLatitude();
             String longitude = locationDTO.getLongitude();
 
-            locationDTO entry
-            LocationDTO locationDTO1 = new LocationDTO();
+            // todo use LocationService and pass those data
+            // todo create a new Location object inside a LocationService
+            //  Location newLocation = locationService.createLocation(city, region...)
 
+            // todo serialize (Location) newLocation to JSON by using objectMapper.writeValueAsString(...)
+
+//            locationDTO entry
+//            LocationDTO locationDTO1 = new LocationDTO();
+
+            // todo return ....
 
         } catch (JsonProcessingException e) {
             String errorMessage = e.getMessage();
             return "{\"message\": \"" + errorMessage + "\"}";
         }
 
-        return data;
+        return data; // todo remove it
     }
 }
