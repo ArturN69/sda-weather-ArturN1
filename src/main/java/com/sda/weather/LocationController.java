@@ -3,6 +3,8 @@ package com.sda.weather;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import javax.xml.stream.Location;
+
 public class LocationController {
 
     private final ObjectMapper objectMapper;
@@ -26,19 +28,19 @@ public class LocationController {
             String longitude = locationDTO.getLongitude();
 
             // todo use LocationService and pass those data
-            
+
             // todo create a new Location object inside a LocationService
             //  Location newLocation = locationService.createLocation(city, region...) <---------------------------
-
+            Location newLocation = locationService.createLocation(city, region, country, latitude, longitude);
             // todo serialize (Location) newLocation to JSON by using objectMapper.writeValueAsString(...)
 
-
+            return objectMapper.writeValueAsString(newLocation);
             // todo return ....
         } catch (JsonProcessingException e) {
             String errorMessage = e.getMessage();
             return "{\"message\": \"" + errorMessage + "\"}";
         }
 
-        return data; // todo remove it
+        // return data; // todo remove it
     }
 }
